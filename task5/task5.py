@@ -10,15 +10,15 @@ for i in range(0, num_n + 1):
     if temp == 0:
         temp = 1
     temp += list_num[i - 1]
-negativ_list = []
+negative_list = []
 count = len(list_num) - 1
 
 for i in range(len(list_num)):
     if list_num[i] != 0 and i % 2 == 0:
-        negativ_list.append(list_num[i] * - 1)
+        negative_list.append(list_num[i] * - 1)
     elif i % 2 != 0:
-        negativ_list.append(list_num[i])
-negativ_list = negativ_list[::-1]
-# list_merged = negativ_list + list_num
-negativ_list.extend(list_num)
-print(negativ_list)
+        negative_list.append(list_num[i])
+negative_list = negative_list[::-1]
+# list_merged = negative_list + list_num
+negative_list.extend(list_num)
+print(negative_list)
