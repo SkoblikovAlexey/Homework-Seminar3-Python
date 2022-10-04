@@ -4,11 +4,10 @@
 
 # - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 
-num_list = [2, 3, 5, 9, 3]
+num_list = [2, 3, 5, 9, 3, 5, 6]
 odd_sum = 0
 odd_index_list = []
-for i in range(0, len(num_list)):        
-    if not i % 2 == 0:
-        odd_index_list.append(num_list[i])
-        odd_sum += num_list[i]
+for i in range(1, len(num_list), 2):   # здесь 2 - это шаг, берем нечетные элементы, что заменяет ветвление (if not i % 2 == 0:)   
+    odd_index_list.append(num_list[i])
+    odd_sum += num_list[i]
 print(f'На нечетных позициях исходного списка элементы:{odd_index_list}, их сумма = {odd_sum}')
